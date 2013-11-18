@@ -47,7 +47,7 @@ put "/posts/:id" do
 end
 
 delete "/posts/:id" do
-  @post = Post.find(params[:id]).destroy
+  @post = Post[params[:id]].destroy
   redirect "/"
 end
 helpers do
